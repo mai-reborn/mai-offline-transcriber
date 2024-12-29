@@ -1,0 +1,15 @@
+__pycache__/
+build/
+dist/
+*.pyc
+*.pyo
+*.app
+app/.DS_Store
+WhisperTranscriber.spec
+main.spec
+.DS_Store
+*.app
+*.sh
+automation/
+automation/whisper_transcriber.sh
+automation/whisper_transcriber_automator_app.app
