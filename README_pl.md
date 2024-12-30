@@ -87,15 +87,15 @@ Poniższe informacje nie są potrzebne do korzystania z aplikacji ale mogą Ci s
 
 - Utwórz plik .ts: Użyj narzędzia lrelease z pakietu Qt, aby utworzyć plik .ts dla nowego języka:
 ```
-pylupdate6 gui.py -ts translations/symbol_języka.ts
+pylupdate6 gui.py -ts translations/language_name.ts
 ```
 
-- Przetłumacz plik .ts: Otwórz nazwa_języka.ts w Qt Linguist i przetłumacz wszystkie teksty.
+- Przetłumacz plik .ts: Otwórz language_name.ts w Qt Linguist i przetłumacz wszystkie teksty.
 
 - Skompiluj do .qm: Użyj `lrelease`, aby skompilować plik .ts do .qm:
 
 ```
-lrelease translations/nazwa_języka.ts -qm translations/symbol_języka.qm
+lrelease translations/language_name.ts -qm translations/language_name.qm
 ```
 
 - Dodaj obsługę w kodzie: Zmodyfikuj kod w gui.py, aby obsługiwał Twój nowy język. Dodaj odpowiedni wpis do menu zmiany języka (QMenu) i w change_language() dodaj obsługę swojego kodu języka.
