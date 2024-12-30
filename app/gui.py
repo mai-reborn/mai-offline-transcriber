@@ -513,10 +513,3 @@ class MainWindow(QWidget):
             self.status_label.setText(self.tr("The transcription file is not available."))
 
 
-# ---------------- Run the application ----------------
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
