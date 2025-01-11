@@ -464,6 +464,7 @@ class MainWindow(QWidget):
         self.output_file_path = os.path.join(os.path.dirname(file_path), base_name + output_format)
 
         self.btn_open_file.setEnabled(False)  # Disable the open output file button
+        self.btn_start.setEnabled(False) # Disable the start button
     
         # Get the audio file duration (e.g., from ffprobe)
         duration_sec = get_audio_duration(file_path)
@@ -495,6 +496,8 @@ class MainWindow(QWidget):
         self.progress.setValue(100)
         self.adjustSize()
 
+        self.btn_start.setEnabled(True)  # Enable the start button
+        
         # Check if the output file exists
         if self.output_file_path and os.path.exists(self.output_file_path):
             self.btn_open_file.setEnabled(True)
