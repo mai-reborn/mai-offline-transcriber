@@ -351,9 +351,9 @@ class MainWindow(QWidget):
         # Title of groupBox
         self.file_group_box.setTitle(self.tr("Input file"))
         
-        # File label (if it was not selected before)
-        if self.file_label.text() in [self.tr("No file selected"), "No file selected"]:
-            self.file_label.setText(self.tr("No file selected"))
+        # File label (translate regardless of the current state)
+        if self.file_label.text() in [self.tr("No file selected"), "No file selected", self.tr("Nie wybrano pliku"), "Nie wybrano pliku"]:
+            self.file_label.setText(self.tr("No file selected")) 
 
         self.btn_choose_file.setText(self.tr("Choose audio/video file"))
 
